@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Your Homes</h2>
+    <ul>
+        {% for home in user_homes %}
+            <li>{{ home.name }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Create a New Home</h3>
+    <form method="POST">
+        <label for="home_name">Home Name:</label>
+        <input type="text" name="home_name" required>
+        <input type="submit" value="Create">
+    </form>
+{% endblock %}
