@@ -104,5 +104,9 @@ def logout():
     session.pop('user_id', None)
     return redirect(url_for('login'))
 
+@app.route('/react')
+def react_app():
+    return render_template('react.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
